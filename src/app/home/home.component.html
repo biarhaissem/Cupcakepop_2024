@@ -4,99 +4,104 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HOME | CupCakePop</title>
-    
+
     <meta name="description" content="Trabalho da matéria de Dev Web da Faculdade Unimetrocamp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-            <!-- Menu -->
-            <nav class="navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar fluid" href="home.html">CupCakePop</a>   
-                   
-                        <div class="navbar collapse">
-                            <a class="nav-link active" aria-current="page" href="home.html">HOME</a>
-                            <a class="nav-link" aria-current="page" href="bem_vindo.html">BEM-VINDO</a>
-                            <a class="nav-link" aria-current="page" href="cardapio.html">CARDÁPIO</a>
-                            <a class="nav-link" aria-current="page" href="sobre_nos.html">SOBRE NÓS</a>
-                            <a class="nav-link" aria-current="page" href="cadastro.html">CADASTRO</a>
-                        </div>
-                    </div>
-            </nav>
+    <div class="container layout">
 
-        <!-- Galeria -->
-        <div class="galeria border border-dark border-4 rounded">
-            <div class="row p-3 text-center imgGaleria">
-                <div class="col-md-12">
-                    <img src="assets/imgs/img_cupcakes.webp" class="img-fluid rounded" alt="bandeja cupckaes variados" />
-                </div>
-            </div>
-            <div class="row p-3 text-center imgGaleria">
-                <div class="col-md-4">
-                    <img src="assets/imgs/cupcake.webp" class="img-fluid rounded" alt="bandeja cupckaes variados" />
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/imgs/muitos_cupcakes.jpg" class="img-fluid rounded" alt="bandeja cupckaes variados" />
-                </div>
-                <div class="col-md-4">
-                    <img src="assets/imgs/moca_cupcake.jpg" class="img-fluid rounded" alt="bandeja cupckaes variados" />
-                </div>
-            </div>
-        </div>
-        <!-- Galeria -->
+      <!-- Logotipo  -->
+      <div class="logotipo-container">
+        <img src="assets/imgs/Logotipo.png" alt="Logotipo" class="logotipo" />
+        <div class="text-center">
+        <span class="logotipo-text-center">CupCakePop<p class="fs-3">Delícias Sem Glúten</p></span>
+      </div>
+    </div>
 
-        <!-- Entre em contato -->
-        <p class="fs-2 text-center pt-5">Entre em contato conosco</p>
-        <div class="row row-cols-1 row-cols-md-3 text-center">
-            <div class="col">
-                <div class="card sociais">
-                    <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
-                    <div class="card-body">
-                        <p class="fs-4">Curtir e Seguir</p>
-                    </div>
-                    <div class="col">
-                        <div class="sociais">
-                            <a class="link" href="https://facebook.com/" target="blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="link" href="https://twitter.com/" target="_blank"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="link" href="https://instagram.com/" target="_blank"><i
-                                 class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card sociais">
-                    <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
-                    <div class="card-body">
-                        <p class="fs-4">Faça seu pedido</p>
-                    </div>
-                    <div class="card-text"><a href="https://biarhaissem.github.io/projetodev/cardapio">Clique Aqui</a></div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card sociais">
-                    <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
-                    <div class="card-body">
-                        <p class="fs-4">Venha nos visitar</p>
-                    </div>
-                    <div class="card-text"><a href="https://www.google.com.br/maps">Ver Mapa</a></div>
-                </div>
-            </div>
+    <!-- Imagem estática maior -->
+    <div class="text-center">
+      <img src="assets/imgs/Image9.png" alt="Imagem Estática" class="img-fluid rounded-circle static-image">
+    </div>
+
+    <!-- Carrossel com várias imagens visíveis -->
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <img *ngFor="let image of images"
+          [src]="image"
+          class="carousel-img"
+          alt="Imagem de Cupcake"
+          (click)="openModal(image)">
+    </div>
+        <!-- Botões para navegação -->
+        <button class="carousel-control-prev" (click)="slide('prev')">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" (click)="slide('next')">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+      <!-- Modal para exibir a imagem ampliada -->
+      <div class="modal" [ngClass]="{'show-modal': showModal}" (click)="closeModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()"> <!-- Para evitar fechar o modal ao clicar dentro dele -->
+          <span class="close-btn" (click)="closeModal()">&times;</span>
+          <img [src]="selectedImage" alt="Imagem ampliada" class="modal-img">
         </div>
+      </div>
+    <!-- Galeria -->
+
+    <!-- Entre em contato -->
+    <p class="fs-4 fw-bold text-center pt-5">Agende uma degustação gratuita e se apaixone!</p>
+    <p class="fs-4 pt-4"></p>
+    <div class="row row-cols-4 row-cols-md-3 g-6 text-center">
+      <div class="col">
+      <div class="card sociais">
+          <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
+          <div class="card-body">
+            <p class="fw-normal fs-4">Curtir e Seguir</p>
+          </div>
+          <div class="col">
+            <div class="sociais">
+              <a class="link" href="https://instagram.com/" target="_blank"><i
+                class="fab fa-instagram fw-bold fs-2"></i></a>
+              <p class="fs-4 pt-2"></p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col">
+        <div class="card sociais">
+            <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
+            <div class="card-body">
+                <p class="fw-normal fs-4">Faça seu pedido</p>
+            </div>
+            <div class="card-text fw-bold fs-4"><a href="http://localhost:4200/cardapio">Clique Aqui</a></div>
+            <p class="fs-4 pt-2"></p>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card sociais">
+            <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
+            <div class="card-body">
+                <p class="fw-normal fs-4">Venha conhecer</p>
+            </div>
+            <div class="card-text fw-bold fs-4"><a href="https://www.google.com.br/maps">Ver Mapa</a></div>
+            <p class="fs-4 pt-2"></p>
+        </div>
+    </div>
+  </div>
+
 
   <!-- Copyright -->
-  <div class="text-center p-3 footer">
-    © 2022 Copyright: CupCakePop
+  <div class="text-center footer">
+    <p class="fs-4 pt-4"></p>
+    © 2024 Copyright: CupCakePop
+    <p class="fs-4 pt-1"></p>
 </div>
 <!-- Copyright -->
-
-
-
-
-  

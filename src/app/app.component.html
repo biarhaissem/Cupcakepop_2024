@@ -1,13 +1,31 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="cupcakepop" href="#">CupCakePop</a>
 
-<nav class="navbar-link">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <button type="button"[routerLink]="['/home']">Home</button>
-  <button type="button"[routerLink]="['/bem-vindo']">Bem-Vindo</button>
-  <button type="button"[routerLink]="['/cardapio']">Cardápio</button>
-  <button type="button"[routerLink]="['/sobre-nos']">Sobre Nós</button>
-  <button type="button"[routerLink]="['/cadastro']">Cadastro</button>
-  
-</nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-2">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/bem-vindo']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Bem-Vindo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cardapio']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/sobre-nos']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cadastro']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

@@ -1,6 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+/* @import '~ngx-toastr/toastr'; */
 
+/* Estilos globais */
+.body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  padding-right: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color:#8B4513;
+}
 
+/* Responsividade simples usando Flexbox */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-left: 2rem;
+  padding: 2rem;
+  padding-left: 2rem;
+  background: linear-gradient(to bottom,rgb(255, 255, 255, 0.9),rgb(255, 222, 173, 0.9));
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  color:#8B4513;
+}
 
+.container-fluid {
+  background: linear-gradient(to bottom,rgb(255, 255, 255, 0.5),rgb(255, 222, 173, 0.5));
+}
 
+.navbar {
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+#cupcakepop {
+  color: #EC8576; /* Defina a cor que quiser */
+  font-weight: bold;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.footer {
+  margin-top: auto; /* Empurra o footer para o fim */
+  color: #8B4513;
+  font-size: 1.2rem;
+}
+
+h1.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+h1, p {
+  color: #8B4513; /* Marrom */
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efeito de hover para destacar os cards */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8B4513;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color:#8B4513;
+}
+
+/* .modal-body {
+  text-align: center;
+}
+
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+} */

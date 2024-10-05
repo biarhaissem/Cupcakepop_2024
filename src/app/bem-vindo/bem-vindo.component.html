@@ -4,72 +4,89 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>BEM-VINDO | CupCakePop</title>
+
     <meta name="description" content="Trabalho da matéria de Dev Web da Faculdade Unimetrocamp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
- <!-- Menu -->
- <nav class="navbar-light bg-light">
-  <div class="container-fluid">
-      <a class="navbar fluid" href="home.html">CupCakePop</a>   
-     
-          <div class="navbar collapse">
-              <a class="nav-link" aria-current="page" href="home.html">HOME</a>
-              <a class="nav-link active" aria-current="page" href="bem_vindo.html">BEM-VINDO</a>
-              <a class="nav-link" aria-current="page" href="cardapio.html">CARDÁPIO</a>
-              <a class="nav-link" aria-current="page" href="sobre_nos.html">SOBRE NÓS</a>
-              <a class="nav-link" aria-current="page" href="cadastro.html">CADASTRO</a>
-          </div>
-      </div>
-</nav>
-
-  <!-- Conteúdo -->
   <div class="container">
-    <!-- Bem-Vindo -->
-    <div class="row pt-3 pb-5 text-center centralizar">
-      <div class="col-md-5">
-        <img src="assets/imgs/cupcake1.jpg" class="img-fluid rounded" alt="cupcake morango">
-      </div>
-      <div class="col-md-7 text-wrap centralizar">
-        <div>
-          <p class="text-uppercase fs-3 fw-bolder pt-4">Bem-Vindo</p>
-          <p class="fs-4 fw-bold">Somos a CupCakePop!</p>
-          <p class="fs-5">
-            Há mais de dez anos produzimos nossos deliciosos cupcakes com muito carinho, responsabilidade e amor.
-            Nossos produtos são feitos com ingredientes selecionados, livres de contaminação cruzada, pensando em você,
-            que é intolerante ao glúten. Temos também a linha zero açúcar. Respeitamos o seu corpo e o seu bolso.
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Endereço e Contato -->
-    <div class="row pt-5 text-center centralizar" id="contato">
-      <div class="col-md-7 text-wrap centralizar">
-        <div>
-          <p class="fs-4 fw-bold">Conheça a nossa loja!</p>
-          <div class="fs-6">
-            <p>Av. Bernardino de Campos, 98<br> São Paulo - SP<br> 12345-678</p>
-            <p>info@cupcakepop.com<br>WhatsApp: (11) 93456-7890</p>
-            <p>Horário de atendimento: <br>Segunda a Sábado<br>10h às 20h</p>
-            <p>Encomende com antecedência e transforme seu evento numa festa!</p>
+    <div class="text-center">
+      <p class="text fs-2 fw-bolder pt-3">Bem-Vindo</p>
+      <p class="fs-4 fw-normal">É uma honra ter você por aqui!</p>
+      <p class="fs-4 pt-1"></p>
+      <div class="fs-5">
+
+      <!-- Primeira Seção (Trocar texto com imagem) -->
+      <div class="row pt-4 pb-4 text-center">
+        <div class="col-md-6 text-center order-md-2">
+          <!-- Imagem expansível -->
+          <img
+            src="assets/imgs/rosinha.png"
+            class="img-fluid rounded-circle static-image"
+            alt="cupcake morango"
+            (click)="expandImage('assets/imgs/rosinha.png')"> <!-- Clique para expandir a imagem -->
+        </div>
+        <div class="col-md-6 text-center order-md-1">
+          <div class="card p-3">
+            <p class="text fs-4 fw-bolder pb-2 pt-0">Visão</p>
+            <div class="fs-5">
+              <p>Ser referência como produtora de cupcakes sem glúten com excelência de qualidade.</p>
+            </div>
+            <p class="text fs-4 fw-bolder pb-2 pt-0">Missão</p>
+            <div class="fs-5">
+              <p>Atender cada cliente com carinho para que nossos produtos proporcionem deliciosos momentos na vida das pessoas.</p>
+            </div>
+            <p class="text fs-4 fw-bolder pb-2 pt-0">Valores</p>
+            <div class="fs-5">
+              <p>Respeito e responsabilidade na produção de cupcakes sem glúten para que nossos clientes tenham segurança e confiança em nossa marca.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-5">
-        <img src="assets/imgs/cupcake2.webp" class="img-fluid rounded" alt="varios cupcakes">
+
+      <!-- Seção Endereço e Contato (Trocar lados de novo) -->
+  <div class="row pt-5 text-center" id="contato">
+    <div class="col-md-6 text-center order-md-2"> <!-- Texto vai para o lado direito em telas maiores -->
+      <div class="card p-3">
+        <p class="fs-4 fw-bold">Esperamos a sua visita!</p>
+        <div class="fs-5">
+          <p>Av. Bernardino de Campos, 98<br> São Paulo - SP</p>
+          <p>info.cupcakepop.com<br>WhatsApp: (11) 93456-7890</p>
+          <p>Horário de atendimento: <br>Segunda a Sábado<br>Das 10h às 20h</p>
+          <p>Consulte nossas promoções!</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-center order-md-1">
+      <!-- Imagem expansível -->
+      <img
+        src="assets/imgs/baunilha.jpg"
+        class="img-fluid rounded-circle static-image"
+        alt="cupcake morango"
+        (click)="expandImage('assets/imgs/baunilha.jpg')"> <!-- Clique para expandir a imagem -->
+    </div>
+  </div>
+
+      <!-- Modal para exibir a imagem ampliada -->
+      <div class="modal" [ngClass]="{'show-modal': showModal}" (click)="closeModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+          <span class="close-btn" (click)="closeModal()">&times;</span>
+          <img [src]="selectedImage" alt="Imagem ampliada" class="modal-img">
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Copyright -->
-  <div class="text-center p-3 footer">
-    © 2022 Copyright: CupCakePop
-  </div>
-  <!-- Copyright -->
+        <!-- Copyright -->
+      <div class="text-center footer">
+        <p class="fs-4 pt-4"></p>
+        © 2024 Copyright: CupCakePop
+        <p class="fs-4 pt-1"></p>
+    </div>
+    <!-- Copyright -->
 
-  

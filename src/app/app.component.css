@@ -7,3 +7,16 @@
         /* Here are some changes*/
   }
 
+  .navbar a {
+    color: #8B4513;
+    background-color: none;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link.active-link {
+    color: #EC8576 !important; /* Certifique-se que a cor se aplique */
+    font-weight: bold; /* Deixe em negrito para destaque */
+  }
+

@@ -1,0 +1,142 @@
+.container {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-family: 'Poppins', sans-serif;
+  color:#8B4513;
+}
+
+.logotipo-container {
+    margin-top: -2rem;
+    margin-left: -20px;
+    max-width: 400px; /* ou outro valor adequado */
+    min-width: 400px; /* para não ficar muito pequeno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.logotipo {
+  max-width: 320px; /* Ajuste o tamanho do logo conforme necessário */
+  filter: drop-shadow(6px 6px 8px rgba(0, 0, 0, 0.2)); /* Sombra do logo */
+}
+
+.logotipo-text-center {
+  font-size: 50px; /* Tamanho do texto */
+  color: #EC8576; /* Cor do texto */
+  font-weight: bold; /* Deixe o texto em negrito, se preferir */
+  text-align: center;
+  white-space: nowrap; /* Evita que o texto quebre a linha */
+}
+
+.static-image {
+  height: 100%;
+  width: 100%; /* Ajuste de acordo com o tamanho desejado */
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-top: -2rem;
+  object-fit: cover;
+}
+
+.carousel-container {
+  position: center;
+  height: 100%;
+  width: 100%; /* Ajuste de acordo com o tamanho desejado */
+  margin: 2px; /* Centraliza o carrossel */
+  overflow: hidden; /* Esconde as imagens que estão fora da área visível */
+}
+
+/* Faixa que mantém todas as imagens */
+.carousel-track {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Animação suave ao deslizar */
+   /* Para garantir que todas as imagens caibam, considerando 6 imagens no total */
+}
+
+/* Estilização de cada imagem */
+.carousel-img {
+  width: calc(100% / 3); /* Para mostrar 3 imagens ao mesmo tempo */
+  height: 300px; /* Altura das imagens */
+  object-fit: cover; /* Para manter a proporção das imagens */
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+/* Estilização dos botões de navegação */
+.carousel-control-prev, .carousel-control-next {
+  display: flex;
+  top: 72rem;
+  transform: translateY(-50%);
+  background-color: rgb(139, 69, 19, 0.5); /*Fundo semitransparente */
+  border-radius: 1rem;
+  color: white;
+  width: 6%;
+  height: 5%;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+/* Estilos para o modal */
+.modal {
+  display: none; /* Inicialmente escondido */
+  position: fixed;
+  z-index: 999; /* Garantir que fique sobre outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Quando o modal estiver ativo */
+.show-modal {
+  display: flex; /* Exibir o modal e centralizar conteúdo */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  position: relative;
+  max-width: 600px;
+  max-height: 400px;
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botão para fechar o modal */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #acacac;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilo da imagem no modal */
+.modal-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 600px;
+  height: 400px;
+  object-fit: contain; /* Garante que a imagem se ajuste corretamente sem distorcer */
+}
