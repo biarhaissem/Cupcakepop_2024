@@ -7,9 +7,6 @@
 
 .logotipo-container {
     margin-top: -2rem;
-    margin-left: -20px;
-    max-width: 400px; /* ou outro valor adequado */
-    min-width: 400px; /* para não ficar muito pequeno */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +37,20 @@
   object-fit: cover;
 }
 
+/* Imagens fluidas para não estourar a tela */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 .carousel-container {
   position: center;
-  height: 100%;
   width: 100%; /* Ajuste de acordo com o tamanho desejado */
-  margin: 2px; /* Centraliza o carrossel */
-  overflow: hidden; /* Esconde as imagens que estão fora da área visível */
+  margin: 0; /* Centraliza o carrossel */
+  overflow-x: scroll; /* Esconde as imagens que estão fora da área visível */
+  display: flex;
 }
 
 /* Faixa que mantém todas as imagens */
@@ -57,33 +62,42 @@
 
 /* Estilização de cada imagem */
 .carousel-img {
-  width: calc(100% / 3); /* Para mostrar 3 imagens ao mesmo tempo */
-  height: 300px; /* Altura das imagens */
+  width: calc(100% / 2); /* Para mostrar 3 imagens ao mesmo tempo */
+  max-width: 100%;
+  height: 100%; /* Altura das imagens */
   object-fit: cover; /* Para manter a proporção das imagens */
-  padding: 0.5rem;
+  padding: 2px;
   border-radius: 1rem;
 }
 
-/* Estilização dos botões de navegação */
 .carousel-control-prev, .carousel-control-next {
+  width:30px; /* Define a largura fixa */
+  height: 30px; /* Define a altura fixa */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  border-radius: 50%; /* Deixa os botões redondos */
   display: flex;
-  top: 72rem;
-  transform: translateY(-50%);
-  background-color: rgb(139, 69, 19, 0.5); /*Fundo semitransparente */
-  border-radius: 1rem;
-  color: white;
-  width: 6%;
-  height: 5%;
-  margin-left: 8rem;
-  margin-right: 8rem;
+  justify-content: center; /* Alinha o ícone horizontalmente */
+  align-items: center; /* Alinha o ícone verticalmente */
+  color: white; /* Cor do ícone */
+  font-size: 20px; /* Tamanho do ícone */
+  position: absolute; /* Garante que os botões fiquem na posição correta */
+  top: 80%; /* Centraliza verticalmente */
+  transform: translateY(90%); /* Ajusta para o centro */
+  z-index: 100; /* Certifica que os botões fiquem acima do conteúdo */
 }
 
+/* Estiliza o ícone para não se expandir */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  font-size: 10px; /* Mantém o ícone consistente */
+}
+
+/* Especifica a posição de cada botão */
 .carousel-control-prev {
-  left: 0;
+  left: 20px; /* Alinha o botão 'prev' à esquerda */
 }
 
 .carousel-control-next {
-  right: 0;
+  right: 20px; /* Alinha o botão 'next' à direita */
 }
 
 /* Estilos para o modal */
@@ -139,4 +153,43 @@
   width: 600px;
   height: 400px;
   object-fit: contain; /* Garante que a imagem se ajuste corretamente sem distorcer */
+}
+
+/* Imagens fluidas para não estourar a tela */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-img {
+  max-width: 88%;
+  height: 88%;
+  margin: 5px;
+}
+
+/* Cards ajustáveis */
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* Footer centralizado e ajustado */
+/* .footer {
+  font-size: 14px;
+  padding: 20px 0;
+} */
+
+/* Ajustes de responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .col {
+      width: 100%;
+      margin-bottom: 20px;
+  }
 }

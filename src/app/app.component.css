@@ -1,12 +1,3 @@
-@media screen and (max-width: 1025px) {
-    /* Here are some changes*/
-  }
-
- /* Mobile device styles */
-  @media screen and (max-width: 480px) {
-        /* Here are some changes*/
-  }
-
   .navbar a {
     color: #8B4513;
     background-color: none;

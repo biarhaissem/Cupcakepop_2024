@@ -3,12 +3,19 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 /* @import '~ngx-toastr/toastr'; */
 
+@media screen and (max-width: 1025px) {
+  /* Here are some changes*/
+}
+
+/* Mobile device styles */
+@media screen and (max-width: 480px) {
+      /* Here are some changes*/
+}
+
 /* Estilos globais */
 .body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  padding-right: 2rem;
   font-family: 'Poppins', sans-serif;
   color:#8B4513;
 }
@@ -20,9 +27,7 @@
   min-height: 100vh;
   margin-top: 3rem;
   margin-bottom: 2rem;
-  border-left: 2rem;
   padding: 2rem;
-  padding-left: 2rem;
   background: linear-gradient(to bottom,rgb(255, 255, 255, 0.9),rgb(255, 222, 173, 0.9));
   border-radius: 1rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -49,7 +54,7 @@
 .footer {
   margin-top: auto; /* Empurra o footer para o fim */
   color: #8B4513;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 h1.title {
@@ -72,23 +77,15 @@ h1, p {
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #8B4513;
   margin-bottom: 1rem;
 }
 
 .card-text {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  /* line-height: 1.5; */
   color:#8B4513;
 }
 
-/* .modal-body {
-  text-align: center;
-}
-
-.modal-body img {
-  max-width: 100%;
-  height: auto;
-} */

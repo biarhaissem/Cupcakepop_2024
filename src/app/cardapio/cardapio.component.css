@@ -60,3 +60,28 @@
   height: 600px;
   object-fit: contain; /* Garante que a imagem se ajuste corretamente sem distorcer */
 }
+
+/* Cards ajustáveis */
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+/* Footer centralizado e ajustado */
+/* .footer {
+  font-size: 14px;
+  padding: 20px 0;
+} */
+
+/* Ajustes de responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+
+  .col {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
