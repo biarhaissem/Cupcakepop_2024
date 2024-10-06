@@ -54,7 +54,7 @@
 .footer {
   margin-top: auto; /* Empurra o footer para o fim */
   color: #8B4513;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 h1.title {
@@ -70,7 +70,9 @@ h1, p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   border-radius: 2rem;
+  background: linear-gradient(to bottom,rgb(255, 222, 173, 0.6),rgb(255, 255, 255, 0.6));
 }
+
 
 .card:hover {
   transform: translateY(-10px); /* Efeito de hover para destacar os cards */
@@ -85,7 +87,6 @@ h1, p {
 
 .card-text {
   font-size: 1rem;
-  /* line-height: 1.5; */
   color:#8B4513;
 }
 

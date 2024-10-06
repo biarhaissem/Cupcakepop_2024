@@ -1,12 +1,13 @@
 .container {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   font-family: 'Poppins', sans-serif;
   color:#8B4513;
 }
 
 .logotipo-container {
     margin-top: -2rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,12 +17,12 @@
 }
 
 .logotipo {
-  max-width: 320px; /* Ajuste o tamanho do logo conforme necessário */
+  max-width: 250px; /* Ajuste o tamanho do logo conforme necessário */
   filter: drop-shadow(6px 6px 8px rgba(0, 0, 0, 0.2)); /* Sombra do logo */
 }
 
 .logotipo-text-center {
-  font-size: 50px; /* Tamanho do texto */
+  font-size: 30px; /* Tamanho do texto */
   color: #EC8576; /* Cor do texto */
   font-weight: bold; /* Deixe o texto em negrito, se preferir */
   text-align: center;
@@ -32,23 +33,15 @@
   height: 100%;
   width: 100%; /* Ajuste de acordo com o tamanho desejado */
   padding: 2rem;
-  border-radius: 2rem;
-  margin-top: -2rem;
-  object-fit: cover;
-}
-
-/* Imagens fluidas para não estourar a tela */
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
+  position:center;
+  display:flex;
+  margin-bottom: 2rem;
 }
 
 .carousel-container {
   position: center;
   width: 100%; /* Ajuste de acordo com o tamanho desejado */
-  margin: 0; /* Centraliza o carrossel */
+  margin-top: 2rem; /* Centraliza o carrossel */
   overflow-x: scroll; /* Esconde as imagens que estão fora da área visível */
   display: flex;
 }
@@ -66,27 +59,27 @@
   max-width: 100%;
   height: 100%; /* Altura das imagens */
   object-fit: cover; /* Para manter a proporção das imagens */
-  padding: 2px;
+  padding: 5px;
   border-radius: 1rem;
 }
 
 .carousel-control-prev, .carousel-control-next {
   width:30px; /* Define a largura fixa */
   height: 30px; /* Define a altura fixa */
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-  border-radius: 50%; /* Deixa os botões redondos */
+  background-color: rgb(139, 69, 19, 0.8); /* Fundo semitransparente */
+  border-radius: 10%; /* Deixa os botões redondos */
   display: flex;
   justify-content: center; /* Alinha o ícone horizontalmente */
   align-items: center; /* Alinha o ícone verticalmente */
   color: white; /* Cor do ícone */
-  font-size: 20px; /* Tamanho do ícone */
+  font-size: 10px; /* Tamanho do ícone */
   position: absolute; /* Garante que os botões fiquem na posição correta */
-  top: 80%; /* Centraliza verticalmente */
+  top: 76%; /* Centraliza verticalmente */
   transform: translateY(90%); /* Ajusta para o centro */
   z-index: 100; /* Certifica que os botões fiquem acima do conteúdo */
 }
 
-/* Estiliza o ícone para não se expandir */
+Estiliza o ícone para não se expandir
 .carousel-control-prev-icon, .carousel-control-next-icon {
   font-size: 10px; /* Mantém o ícone consistente */
 }
@@ -126,8 +119,8 @@
   max-height: 400px;
   width: 100%;
   height: auto;
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
+  background-color: rgb(139, 69, 19, 0.5);
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -141,7 +134,7 @@
   right: 20px;
   font-size: 30px;
   font-weight: bold;
-  color: #acacac;
+  color: #ffffff;
   cursor: pointer;
   z-index: 1000;
 }
@@ -156,23 +149,17 @@
 }
 
 /* Imagens fluidas para não estourar a tela */
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
 
-.carousel-img {
-  max-width: 88%;
-  height: 88%;
-  margin: 5px;
-}
+/* .carousel-img {
+  max-width: 80%;
+  height: 80%px;
+  margin: 2px;
+} */
 
 /* Cards ajustáveis */
 .card {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
+  max-width: 200px;
   margin: 20px auto;
 }
 

@@ -1,6 +1,6 @@
 .container {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   /* font-size: 1.2rem; */
   font-family: 'Poppins', sans-serif;
   color:#8B4513;
@@ -32,7 +32,7 @@
   max-height: 600px;
   width: 100%;
   height: auto;
-  background-color: white;
+  background-color: rgb(139, 69, 19, 0.5);
   padding: 20px;
   border-radius: 10px;
   display: flex;
