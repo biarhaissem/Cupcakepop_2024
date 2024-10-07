@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <div class="container layout">
+    <div class="container">
 
       <!-- Logotipo  -->
       <div class="logotipo-container">
@@ -25,7 +25,9 @@
 
     <!-- Imagem estática maior -->
     <div class="text-center">
-      <img src="assets/imgs/Image9.png" alt="Imagem Estática" class="img-fluid rounded-circle mx-auto mt-2">
+      <img src="assets/imgs/capasite.png" alt="Imagem Estática" class="img-fluid rounded-circle mx-auto mt-2"
+      (click)="openModal('assets/imgs/capasite.png')"
+      style="cursor: pointer;">
     </div>
 
     <!-- Carrossel com várias imagens visíveis -->
@@ -54,6 +56,12 @@
           <img [src]="selectedImage" alt="Imagem ampliada" class="modal-img">
         </div>
       </div>
+      <div *ngIf="currentImage" class="modal">
+        <div class="modal-content">
+          <span class="close" (click)="closeModal()">&times;</span>
+          <img [src]="currentImage" alt="Imagem Expandida" class="img-fluid">
+        </div>
+      </div>
     <!-- Galeria -->
 
     <!-- Entre em contato -->
@@ -80,23 +88,32 @@
             <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
             <div class="card-body">
                 <p class="fw-normal fs-6">Faça seu pedido</p>
+              </div>
+              <div class="col">
+                <div class="sociais">
+                  <a class="link" href="https://whatsapp.com/" target="_blank"><i
+                    class="fab fa-whatsapp fw-bold fs-2"></i></a>
+                  <p class="fs-4 pt-2"></p>
+              </div>
             </div>
-            <div class="card-text fw-bold fs-6"><a href="http://localhost:4200/cardapio">Aqui</a></div>
-            <p class="fs-4 pt-2"></p>
+          </div>
         </div>
-    </div>
     <div class="col">
         <div class="card sociais">
             <img src="assets/imgs/Logo.png" class="card-img-top" alt="icon cupcake" />
             <div class="card-body">
                 <p class="fw-normal fs-6">Venha conhecer</p>
             </div>
-            <div class="card-text fw-bold fs-6"><a href="https://www.google.com.br/maps">Mapa</a></div>
-            <p class="fs-4 pt-2"></p>
+            <div class="col">
+              <div class="sociais">
+                <a class="link" href="https://www.google.com.br/maps/" target="_blank"><i
+                  class="fa fa-map-marker-alt fw-bold fs-2"></i></a>
+                <p class="fs-4 pt-2"></p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-  </div>
-
 
   <!-- Copyright -->
   <div class="text-center footer">

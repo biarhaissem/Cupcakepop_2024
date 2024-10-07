@@ -67,7 +67,7 @@
   width:30px; /* Define a largura fixa */
   height: 30px; /* Define a altura fixa */
   background-color: rgb(139, 69, 19, 0.8); /* Fundo semitransparente */
-  border-radius: 10%; /* Deixa os botões redondos */
+  border-radius: 50%; /* Deixa os botões redondos */
   display: flex;
   justify-content: center; /* Alinha o ícone horizontalmente */
   align-items: center; /* Alinha o ícone verticalmente */
@@ -97,7 +97,7 @@ Estiliza o ícone para não se expandir
 .modal {
   display: none; /* Inicialmente escondido */
   position: fixed;
-  z-index: 999; /* Garantir que fique sobre outros elementos */
+  z-index: 100; /* Garantir que fique sobre outros elementos */
   left: 0;
   top: 0;
   width: 100%;
@@ -116,11 +116,11 @@ Estiliza o ícone para não se expandir
 .modal-content {
   position: relative;
   max-width: 600px;
-  max-height: 400px;
+  max-height: 600px;
   width: 100%;
   height: auto;
   background-color: rgb(139, 69, 19, 0.5);
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -131,20 +131,20 @@ Estiliza o ícone para não se expandir
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 22px;
   font-size: 30px;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 100;
 }
 
 /* Estilo da imagem no modal */
 .modal-img {
   max-width: 100%;
   max-height: 100%;
-  width: 600px;
-  height: 400px;
+  /* width: auto;
+  height: auto; */
   object-fit: contain; /* Garante que a imagem se ajuste corretamente sem distorcer */
 }
 

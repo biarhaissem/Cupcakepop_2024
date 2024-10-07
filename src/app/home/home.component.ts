@@ -13,21 +13,23 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  images = [
+  images: string[] = [
+    'assets/imgs/lindosuper.png',
+    'assets/imgs/lindos.png',
     'assets/imgs/cupscoloridos.png',
+    'assets/imgs/bonitos2.png',
     'assets/imgs/cupstrio.png',
+    'assets/imgs/halloween.png',
     'assets/imgs/cupsvariados.png',
-    'assets/imgs/rosaduplo.png',
     'assets/imgs/brigadeirohome.png',
-    'assets/imgs/muitos.png'
   ];
 
   currentSlide = 0;
-  totalSlides = 6; // Número total de imagens no carrossel
+  totalSlides = 8; // Número total de imagens no carrossel
 
   slide(direction: string) {
     const track = document.querySelector('.carousel-track') as HTMLElement;
-    const slideWidth = track.offsetWidth / 6; // Dividido pelo total de imagens
+    const slideWidth = track.offsetWidth / 8; // Dividido pelo total de imagens
 
     if (direction === 'next') {
       this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
@@ -41,10 +43,12 @@ export class HomeComponent implements OnInit {
 
   selectedImage: string | null = null;  // Imagem atualmente selecionada
   showModal: boolean = false;  // Controla a exibição do modal
+  currentImage: string | null = null;
 
   // Método para abrir o modal
   openModal(image: string): void {
     this.selectedImage = image;
+    this.currentImage = image;
     this.showModal = true;
   }
 
@@ -52,8 +56,7 @@ export class HomeComponent implements OnInit {
   closeModal(): void {
     this.showModal = false;
     this.selectedImage = null;
+    this.currentImage = null;
+    console.log('Modal fechado');
   }
 }
-
-
-
