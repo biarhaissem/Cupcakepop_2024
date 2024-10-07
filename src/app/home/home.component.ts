@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
 
   images: string[] = [
     'assets/imgs/lindosuper.png',
-    'assets/imgs/lindos.png',
-    'assets/imgs/cupscoloridos.png',
-    'assets/imgs/bonitos2.png',
-    'assets/imgs/cupstrio.png',
-    'assets/imgs/halloween.png',
     'assets/imgs/cupsvariados.png',
+    'assets/imgs/cupscoloridos.png',
+    'assets/imgs/cupstrio.png',
+    'assets/imgs/bonitos2.png',
+    'assets/imgs/lindos.png',
+    'assets/imgs/halloween.png',
     'assets/imgs/brigadeirohome.png',
   ];
 
